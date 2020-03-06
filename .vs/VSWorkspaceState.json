@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\stack_overflow",
+    "\\stack_overflow\\spiders"
   ],
+  "SelectedNode": "\\stack_overflow\\spiders\\soqa.py",
   "PreviewInSolutionExplorer": false
 }
