@@ -12,9 +12,12 @@ class StackOverflowItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     question = scrapy.Field()
-    qcontent = scrapy.Field()
+    questioncontent = scrapy.Field()
+    questionvote = scrapy.Field()
+
+    answercount = scrapy.Field()
     accepted_answer = scrapy.Field()
-    otheranswers = scrapy.Field()
-    qvote = scrapy.Field()
-    avote = scrapy.Field()
-    ovote = scrapy.Field()
+    accepted_answervote = scrapy.Field()
+
+    suggestedanswers = scrapy.Field()
+    suggestedanswersvote = scrapy.Field()
