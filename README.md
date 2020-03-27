@@ -2,13 +2,11 @@
 
 运行说明：
 
-安装必要 python 库
+下载项目文件；安装必要 python 库
 
-1.命令行操作：
+1.命令行操作
 
--命令行工具之scrapy runspider soqa(本爬虫名)（全局命令）
-
--命令行工具之scrapy crawl soqa（项目级命令,进入项目所在目录时使用）
+scrapy crawl soqa（项目级命令,进入项目所在目录时使用）
 
 2.pycharm打开项目，编缉文件调试运行配置:
 
