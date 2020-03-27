@@ -14,6 +14,24 @@ BOT_NAME = 'stack_overflow'
 SPIDER_MODULES = ['stack_overflow.spiders']
 NEWSPIDER_MODULE = 'stack_overflow.spiders'
 
+FEED_URI = 'file:///C:/spider/export.csv'
+FEED_FORMAT = 'CSV'
+CSV_DELIMITER = '\t'
+# FEED_EXPORTERS = {
+#     'csv': 'stack_overflow.spiders.csv_item_exporter.MyProjectCsvItemExporter',
+# }
+
+# FIELDS_TO_EXPORT = [
+#     'question',
+#     'questioncontent',
+#     'questionvote',
+#     'answercount',
+#     'accepted_answer',
+#     'accepted_answervote',
+#     'suggestedanswers',
+#     'suggestedanswersvote'
+# ]
+
 USER_AGENT='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
 
 
@@ -66,9 +84,11 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
+ITEM_PIPELINES = {
 #    'stack_overflow.pipelines.StackOverflowPipeline': 300,
-#}
+    # 'scrapy.pipelines.images.ImagesPipeline': 300,
+    'stack_overflow.pipelines.CSVPipeline': 300
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

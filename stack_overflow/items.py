@@ -14,10 +14,13 @@ class StackOverflowItem(scrapy.Item):
     question = scrapy.Field()
     questioncontent = scrapy.Field()
     questionvote = scrapy.Field()
+    # questioncomment = scrapy.Field()
 
     answercount = scrapy.Field()
     accepted_answer = scrapy.Field()
     accepted_answervote = scrapy.Field()
+    # accepted_answercomment = scrapy.Field()
 
     suggestedanswers = scrapy.Field()
     suggestedanswersvote = scrapy.Field()
+    # suggestedanswerscomment = scrapy.Field()
