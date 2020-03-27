@@ -6,7 +6,7 @@
 
 1.命令行操作
 
-scrapy crawl soqa（项目级命令,进入项目所在目录时使用）
+scrapy crawl soqa（本爬虫名）（项目级命令,进入项目所在目录时使用）
 
 2.pycharm打开项目，编缉文件调试运行配置:
 
