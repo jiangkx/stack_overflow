@@ -25,14 +25,17 @@ class CSVPipeline(object):
     self.files[spider] = file
     self.exporter = CsvItemExporter(file)
     self.exporter.fields_to_export = [
-        'question',
-        'questioncontent',
-        'questionvote',
-        'answercount',
+        '_question',
+        '_qv_content',
+        '_qv_vote',
+        '_qv_comment',
+        'total_answer_count',
         'accepted_answer',
-        'accepted_answervote',
+        'at_vote',
+        'at_comment',
         'suggestedanswers',
-        'suggestedanswersvote'
+        'sv_vote',
+        'sv_comment'
     ]
     self.exporter.start_exporting()
 
