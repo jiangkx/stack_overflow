@@ -20,6 +20,7 @@ class CSVPipeline(object):
     crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
     return pipeline
 
+# 需要修改数据空行问题
   def spider_opened(self, spider):
     file = open('%s_items.csv' % spider.name, 'w+b')
     self.files[spider] = file

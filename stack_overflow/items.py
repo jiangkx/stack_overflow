@@ -22,6 +22,7 @@ class StackOverflowItem(scrapy.Item):
     at_vote = scrapy.Field()
     at_comment = scrapy.Field()
 
-    suggestedanswers = scrapy.Field()
+# 字段串行化
+    suggestedanswers = scrapy.Field(serializer=lambda x: '|'.join(x))
     sv_vote = scrapy.Field()
     sv_comment = scrapy.Field()
