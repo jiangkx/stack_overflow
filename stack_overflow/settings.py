@@ -17,6 +17,9 @@ NEWSPIDER_MODULE = 'stack_overflow.spiders'
 FEED_URI = 'file:///C:/spider/export.csv'
 FEED_FORMAT = 'CSV'
 CSV_DELIMITER = '\t'
+
+CLOSESPIDER_ITEMCOUNT = 86
+
 # FEED_EXPORTERS = {
 #     'csv': 'stack_overflow.spiders.csv_item_exporter.MyProjectCsvItemExporter',
 # }
@@ -47,6 +50,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
+DOWNLOAD_DELAY = 0.25
 #DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
