@@ -25,18 +25,21 @@ def main():
     # 定位 pack包 place位置 grid是网格式的布局 #Entry是可输入文本框
     keyword = Entry(root, font=("微软雅黑", 15))
     keyword.grid(row=1, column=0)
-
-    Label(root, text='定制功能', font=("华文行楷", 20), fg='black').grid(row=3, column=0, sticky=W)
-    Label(root, text='以下为可选项目，可空', font=("华文行楷", 20), fg='black').grid(row=4, column=0, sticky=W)
-
-    Label(root, text='（1）请输入爬取问题的数量(问题点赞数降序选取，小于100):', font=("华文行楷", 20), fg='black').grid(row=5, column=0, sticky=W)
+    Label(root, text='输入爬取问题的数量:', font=("华文行楷", 20), fg='black').grid(row=2, column=0, sticky=W)
     k1 = Entry(root, font=("微软雅黑", 15))
-    k1.grid(row=6, column=0)
+    k1.grid(row=3, column=0)
+
+    Label(root, text='定制功能', font=("华文行楷", 20), fg='black').grid(row=5, column=0, sticky=W)
+    Label(root, text='以下为可选项目，可空', font=("华文行楷", 20), fg='black').grid(row=6, column=0, sticky=W)
+
+    Label(root, text='（1）请输入爬取问题的数量(问题点赞数降序选取，小于100):', font=("华文行楷", 20), fg='black').grid(row=7, column=0, sticky=W)
+    k1 = Entry(root, font=("微软雅黑", 15))
+    k1.grid(row=8, column=0)
     #可优化（同时含有以空格间隔，或含有用+间隔）
-    Label(root, text='（2）问题内容中应含有的关键字:', font=("华文行楷", 20), fg='black').grid(row=7, column=0,
+    Label(root, text='（2）问题内容中应含有的关键字:', font=("华文行楷", 20), fg='black').grid(row=9, column=0,
                                                                                                   sticky=W)
     k2 = Entry(root, font=("微软雅黑", 15))
-    k2.grid(row=8, column=0)
+    k2.grid(row=10, column=0)
 
     # 列表控件
     text = Listbox(root, font=('微软雅黑', 15), width=45, height=10)
@@ -46,9 +49,10 @@ def main():
 
     # 设置按钮 sticky对齐方式，N S W E
     # 开始爬取按钮后还缺少 command 跳转至爬虫解析函数
-    button = Button(root, text='开始爬取', font=("微软雅黑", 15)).grid(row=2, column=0, sticky=W)
-    button = Button(root, text='数据选择', font=("微软雅黑", 15)).grid(row=10, column=0, sticky=W)
-    button = Button(root, text='退出', font=("微软雅黑", 15), command=root.quit).grid(row=2, column=1, sticky=E)
+    button = Button(root, text='开始爬取', font=("微软雅黑", 15)).grid(row=4, column=0, sticky=W)
+    
+    button = Button(root, text='退出工具', font=("微软雅黑", 15), command=root.quit).grid(row=4, column=1, sticky=E)
+    button = Button(root, text='数据选择', font=("微软雅黑", 15)).grid(row=11, column=0, sticky=W)
 
     # 使得窗口一直存在
     mainloop()

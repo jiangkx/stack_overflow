@@ -18,7 +18,7 @@ FEED_URI = 'file:///C:/spider/export.csv'
 FEED_FORMAT = 'CSV'
 CSV_DELIMITER = '\t'
 
-CLOSESPIDER_ITEMCOUNT = 86
+CLOSESPIDER_ITEMCOUNT = 15
 
 # FEED_EXPORTERS = {
 #     'csv': 'stack_overflow.spiders.csv_item_exporter.MyProjectCsvItemExporter',
